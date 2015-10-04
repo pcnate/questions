@@ -1,0 +1,121 @@
+<html>
+<head>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+}
+#cssmenu ul .has-sub {
+    z-index: 1;
+}
+#cssmenu ul .menu1 {
+  border-bottom: solid black;
+}
+#cssmenu ul .menu1:hover {
+  border-bottom: solid #19A3FF;
+  padding: 0;
+    -webkit-transition: border-color .3s linear; /* Saf3.2+, Chrome */
+     -moz-transition: border-color .3s linear; /* FF3.7+ */
+       -o-transition: border-color .3s linear; /* Opera 10.5 */
+          transition: border-color .3s linear;
+}
+#cssmenu ul .right {
+  float: right;
+}
+#cssmenu ul li ul li {
+  color: white;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: '';
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+#cssmenu {
+  font-family: 'Montserrat', sans-serif;
+  background: #F5F5F5;
+}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu > ul > li > a {
+  padding: 17px;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+#cssmenu > ul > li.has-sub > a:before {
+  position: absolute;
+  top: 19px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #dddddd;
+}
+#cssmenu ul.sub {
+  margin-top:3px;
+}
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+}
+#cssmenu li:hover > ul {
+  left: auto;
+}
+#cssmenu li:hover > ul > li {
+  height: 35px;
+}
+#cssmenu ul ul ul {
+  margin-left: 100%;
+  top: 0;
+}
+#cssmenu ul ul li a {
+  border-bottom: 1px solid rgba(150, 150, 150, 0.15);
+  padding: 11px 15px;
+  width: 170px;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  background: #333333;
+}
+</style>
+</head>
+<body>
+<div id='cssmenu'>
+<ul>
+   <li class='menu1'><a href='#'>Home</a></li>
+   <li class='menu1 has-sub'><a href='#'>Products</a>
+      <ul class="sub">
+         <li class='sub-in-sub'><a href='#'>Product 1</a>
+            <ul>
+               <li><a href='#'>Sub Product</a></li>
+               <li><a href='#'>Sub Product</a></li>
+            </ul>
+         </li>
+         <li class='sub-in-sub'><a href='#'>Product 2</a>
+            <ul>
+               <li><a href='#'>Sub Product</a></li>
+               <li><a href='#'>Sub Product</a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li class='menu1'><a href='#'>About</a></li>
+   <li class='menu1 right'><a href='#'>Contact</a></li>
+</ul>
+</div>
+</body>
+</html>
